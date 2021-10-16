@@ -22,3 +22,61 @@ h1, h2, h3 {
 p, a {
   font-family: 'Open Sans', sans-serif;
 }
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1352px;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--base-color);
+  box-shadow: 0 3px 6px var(--menu-shadow-color);
+}
+
+.header .container {
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  font-size: 32px;
+  color: var(--main-theme-color);
+}
+
+.page-nav {
+  width: 50%;
+}
+
+.page-nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-nav__list-item a {
+  display: inline-block;
+  padding: 28px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--info-text-color);
+  border-bottom: 3px solid var(--base-color);
+}
+
+.page-nav__list-item a:hover {
+  color: var(--main-text-color);
+  border-bottom: 3px solid var(--main-theme-color);
+}
