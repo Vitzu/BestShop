@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: #FFFFFF;
+  --secondary-bg-color: #F7F7F7;
+  --main-theme-color: #08A6E4;
+  --vibrant-main-theme-color: #07ACE6;
+  --secondary-theme-color: #FB3B64;
+  --tertiary-theme-color: #55DFB4;
+  --main-text-color: #000000;
+  --info-text-color: #A5A5A5;
+  --menu-shadow-color: #00000029;
+  --element-shadow-color: #07ACE629;
+}
+
+h1, h2, h3 {
+  font-family: Raleway, sans-serif;
+}
+
+p, a {
+  font-family: 'Open Sans', sans-serif;
+}
