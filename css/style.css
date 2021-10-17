@@ -100,7 +100,7 @@ button {
   justify-content: space-between;
 }
 
-.logo {
+.header__logo {
   font-family: Raleway, sans-serif;
   font-weight: 300;
   font-size: 32px;
@@ -608,4 +608,45 @@ button {
   margin-top: 20px;
   padding: 20px 100px;
   box-shadow: 5px 10px 14px var(--element-shadow-color);
+}
+
+
+/* FOOTER */
+
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: var(--secondary-bg-color);
+  box-shadow: 0 -5px 40px var(--menu-shadow-color);
+}
+
+.footer .wrapper {
+  justify-content: space-between;
+}
+
+.footer__logo {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__logo--link {
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  color: var(--main-theme-color);
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 11px;
+  color: var(--info-text-color);
+}
+
+.footer__social-links {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  min-width: 70px;
 }
