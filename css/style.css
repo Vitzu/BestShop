@@ -58,10 +58,10 @@ button {
 
 .container {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1352px;
+  max-width: 1352px;
   height: 100%;
 }
 
@@ -69,6 +69,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   width: 100%;
 }
 
@@ -87,7 +88,9 @@ button {
 /* HEADER */
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -138,12 +141,11 @@ button {
 
 .landing-page {
   height: 100vh;
-  background: var(--base-color) url("../assets/background.png") no-repeat bottom/contain;
+  background: var(--base-color);
 }
 
-.landing-page .container {
-  flex-wrap: wrap;
-  height: 50%;
+.landing-page__img img {
+  width: 100%;
 }
 
 .landing-page__title {
@@ -166,20 +168,21 @@ button {
 /* WHY-US SECTION*/
 
 .why-us {
-  height: 70vh;
+  padding: 70px 0;
   background: var(--base-color);
 }
 
-.why-us .wrapper {
-  padding-top: 5%;
-  height: 70%;
+.why-us .section-title {
+  margin-bottom: 70px;
+  text-align: center;
 }
 
 .why-us__article {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  width: 25%;
+  padding-bottom: 20px;
+  min-width: 33%;
 }
 
 .why-us__title {
@@ -237,7 +240,7 @@ button {
   background: var(--base-color);
   padding: 30px;
   margin-bottom: 50px;
-  height: 400px;
+  min-height: 400px;
   max-width: 90%;
 }
 
@@ -248,11 +251,11 @@ button {
 
 .benefits__article {
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
   justify-content: center;
   padding: 15px;
   height: 100%;
-  max-width: 40%;
+  max-width: 500px;
 }
 
 .benefits__article::after {
@@ -268,19 +271,17 @@ button {
 }
 
 .benefits__img {
+  align-self: flex-end;
   position: relative;
   z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 100%;
+  padding: 20px;
 }
 
 .benefits__img img {
-   max-width: 60%;
+  max-width: 450px;
  }
 
-.wrapper .benefits__img::before {
+.benefits__img::before {
   position: absolute;
   z-index: -1;
   content: '';
@@ -289,8 +290,8 @@ button {
 /* TOP BENEFIT BOX'S SQUARE SHAPE AND ARTICLE UNDERLINE */
 
 .wrapper:first-of-type .benefits__img::before {
-  top: 20%;
-  right: 20%;
+  top: -10%;
+  right:  5%;
   width: 180px;
   height: 180px;
   background: var(--secondary-theme-color);
@@ -305,8 +306,8 @@ button {
 /* MIDDLE BENEFIT BOX'S CIRCLE SHAPE AND ARTICLE UNDERLINE*/
 
 .wrapper:nth-of-type(2) .benefits__img::before {
-  top: 0;
-  left: 20%;
+  top: 5%;
+  left: 5%;
   height: 320px;
   width: 320px;
   background: var(--vibrant-main-theme-color);
@@ -355,7 +356,7 @@ button {
 /* OFFERS SECTION*/
 
 .prices {
-  padding: 100px;
+  padding: 50px 0;
   background: var(--base-color);
 }
 
@@ -398,7 +399,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
+  padding: 20px;
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
 }
@@ -507,27 +508,35 @@ button {
 
 /* LEFT-HAND CONTACT SECTION */
 
+.contact__info {
+  padding: 20px;
+  min-width: 300px;
+}
+
 .contact__title {
-  margin-bottom: 30px;
   font-size: 49px;
 }
 
 .contact__text {
+  margin: 30px auto;
   font-size: 16px;
 }
 
 .contact--parameter {
   position: relative;
   display: inline-block;
-  margin: 50px auto;
-  padding-left: 40px;
   color: var(--info-text-color);
+}
+
+.contact__info--directions {
+  display: flex;
+  justify-content: space-around;
 }
 
 .contact--parameter::before {
   position: absolute;
   top: -5px;
-  left: 0;
+  left: -28px;
   content: '';
   height: 27px;
   width: 27px;
@@ -538,7 +547,6 @@ button {
 }
 
 .contact__tel-number {
-  margin-left: 20px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
@@ -553,6 +561,7 @@ button {
   display: flex;
   flex-direction: column;
   max-width: 45%;
+  min-width: 300px;
 }
 
 .contact__input--label {
