@@ -1,0 +1,27 @@
+.landing-page {
+  padding: 0 20px;
+  height: 100vh;
+  background: $color-base;
+}
+
+.landing-page__img {
+  img {
+    width: 100%;
+  }
+}
+
+.landing-page__title {
+  font-size: 49px;
+  color: $color-text-main;
+}
+
+.landing-page__text {
+  margin: 30px;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-text-main;
+}
+
+.button__cta-button {
+  padding: 22px 155px;
+}

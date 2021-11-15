@@ -1,0 +1,134 @@
+.prices {
+  padding: 50px 20px;
+  background: $color-base;
+
+  .wrapper {
+    align-items: center;
+  }
+}
+
+.offer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  padding: 30px;
+  min-width: $width-offer-box;
+  min-height: $height-offer-box;
+  border-radius: 18px;
+
+  &:first-of-type {
+    border: 2px solid $color-theme-secondary;
+
+    .offer__price {
+      color: var(--color-theme-secondary);
+    }
+
+    .offer__button {
+      background: var(--color-theme-secondary);
+    }
+  }
+
+  &:nth-of-type(2) {
+    min-width: calc(#{$width-offer-box} + 50px);
+    min-height: calc(#{$height-offer-box} + 130px);
+    border: 2px solid $color-theme-main-vibrant;
+    box-shadow: 5px 10px 27px $color-shadow-element;
+
+    .offer__price {
+      color: $color-theme-main-vibrant;
+    }
+
+    .offer__button {
+      background: $color-theme-main-vibrant;
+      box-shadow: 5px 10px 14px $color-shadow-element;
+    }
+  }
+
+  &:last-of-type {
+    border: 2px solid $color-theme-tertiary;
+
+    .offer__price {
+      color: $color-theme-tertiary;
+    }
+
+    .offer__button {
+      background: $color-theme-tertiary;
+    }
+  }
+}
+
+.offer__name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.offer__price {
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 46px;
+  font-weight: 300;
+}
+
+.offer--small-text {
+  font-family: Raleway, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.offer__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+}
+
+.offer__list-item {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+
+.offer__list-item--ok {
+  &::before {
+    position: absolute;
+    left: -3px;
+    display: inline-block;
+    content: '';
+    height: 11px;
+    width: 11px;
+    background: url("data:/assets/Ckechmark-1.svg") no-repeat center/cover;
+  }
+}
+
+.offer__list-item--not {
+  &::before {
+    position: absolute;
+    left: -3px;
+    display: inline-block;
+    content: 'x';
+    font-family: Raleway, sans-serif;
+    font-size: 8px;
+    font-weight: 700;
+    text-align: center;
+    color: $color-theme-secondary;
+    height: 9px;
+    width: 9px;
+    border: 1px solid $color-theme-secondary;
+    border-radius: 2px;
+  }
+}
+
+.offer__button {
+  position: absolute;
+  bottom: calc(-1 * (45px / 2));
+  padding: 16px 65px;
+  font-size: 13px;
+  line-height: 15px;
+}

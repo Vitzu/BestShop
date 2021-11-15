@@ -1,0 +1,126 @@
+.contact {
+  padding: 100px;
+  background: $color-base;
+
+  .wrapper {
+    justify-content: space-around;
+  }
+}
+
+.contact__info {
+  padding: 20px;
+  min-width: 300px;
+}
+
+.contact__title {
+  font-size: 49px;
+}
+
+.contact__text {
+  margin: 30px auto;
+  font-size: 16px;
+}
+
+.contact--parameter {
+  position: relative;
+  display: inline-block;
+  color: $color-text-info;
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    left: -28px;
+    content: '';
+    height: 27px;
+    width: 27px;
+  }
+}
+
+.contact__info--directions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact__email-link {
+  &::before {
+    background: url("data:assets/Mail Icon.svg");
+  }
+}
+
+.contact__tel-number {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+
+  &::before {
+    background: url("data:assets/Phone Icon.svg");
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 45%;
+  min-width: 300px;
+}
+
+.contact__input--label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: $color-theme-main;
+}
+
+.contact__input {
+  margin-bottom: 20px;
+  line-height: 40px;
+  border: none;
+  border-bottom: 1px solid $color-text-info;
+}
+
+.contact__consent {
+  position: relative;
+  padding-left: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 17px;
+  color: $color-text-info;
+}
+
+.contact--not-checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+
+  &:checked {
+    + {
+      .contact__consent {
+        .contact--checkbox {
+          background: url("data:assets/Checkmark.svg") no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+.contact--checkbox {
+  position: absolute;
+  left: 5px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $color-text-info;
+  border-radius: 4px;
+}
+
+.contact__button {
+  align-self: flex-end;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  margin-top: 20px;
+  padding: 20px 100px;
+  box-shadow: 5px 10px 14px $color-shadow-element;
+}

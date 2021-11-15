@@ -1,2 +1,11 @@
-@import "reset";
-@import "style";
+@import "settings/reset";
+@import "settings/variables";
+@import "settings/general";
+
+@import "components/header";
+@import "components/landing-page";
+@import "components/why-us";
+@import "components/benefits";
+@import "components/prices";
+@import "components/contact";
+@import "components/footer";
