@@ -6,7 +6,7 @@
   justify-content: center;
   width: 100%;
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 3px 6px var(--color-shadow-menu);
+  box-shadow: 0 3px 6px $color-shadow-menu;
 
   .wrapper {
     align-items: center;
@@ -18,7 +18,7 @@
   font-family: Raleway, sans-serif;
   font-weight: 300;
   font-size: 32px;
-  color: var(--color-theme-main);
+  color: $color-theme-main;
 }
 
 .page-nav {
@@ -40,11 +40,12 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--color-text-info);
-    border-bottom: 3px solid var(--color-base);
+    color: $color-text-info;
+    border-bottom: 3px solid $color-base;
+
     &:hover {
-      color: var(--color-text-main);
-      border-bottom: 3px solid var(--color-theme-main);
+      color: $color-text-main);
+      border-bottom: 3px solid $color-theme-main;
     }
   }
 }
